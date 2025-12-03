@@ -68,6 +68,7 @@ class baseModel():
 
         # Set device
         self.setDevice(nGPU)
+        net = nn.DataParallel(net) ####################################
         self.net = net.to(self.device)
 
         # Check for the results save path.
